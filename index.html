@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<Link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<title>Score Sheet</title>
+  <style type="text/css">
+  	
+	  	.tabl{
+	  		border-color: rgba(0, 0, 0, 0.1);
+	  	}
+	  	body{
+	  		background-color:#FFE8D4;
+	  	}
+	  	h1{
+	  		color: #231942;
+	  	}
+	  	.pee{
+	  		color: ;
+	  	}
+  </style>
+
+
+
+</head>
+<body>
+    
+		<div class="container">
+
+  	 <div class="row text-center">
+    	<div class="col">
+    		<h1 class="p-5">GOSHEN HIGH SCHOOL GRADE SHEET</h1>
+    	</div>
+    </div>
+
+
+	<div class="row">
+		<div class="col">
+			<table class="table tabl">
+		<tr>
+			<td > SUBJECT</td>
+			<td >SCORE</td>
+			<td> GRADE</td>
+
+		</tr>
+		<tr>
+			
+			<td>English</td>
+			<td> <input type="text" id="engscore"  oninput="english()"></td>
+			<td><input type="text" id="engrade"> </td>
+
+		</tr>
+		<tr>
+			
+			<td>Maths</td>
+			<td> <input type="text" id="mathscore" oninput="maths()"></td>
+			<td><input type="text" id="mathgrade"> </td>
+
+		</tr>
+		<tr>
+			
+			<td>Chemistry</td>
+			<td> <input type="text" id="chescore" oninput="chemistry()" ></td>
+			<td><input type="text"id="chegrade"> </td>
+
+		</tr>
+		<tr>
+			
+			<td>Biology</td>
+			<td> <input type="text" id="bioscore"oninput="biology()" ></td>
+			<td><input type="text" id="biograde"> </td>
+
+		</tr>
+		<tr>
+			
+			<td>French</td>
+			<td> <input type="text" id="frescore" oninput="french()"></td>
+			<td><input type="text" id="fregrade"> </td>
+
+		</tr>
+         
+      
+	     <tr>
+			
+			<td> <button class="btn btn-success" onclick="getresult();" >Get result</button></td>
+			<td> </td>
+			<td></td>
+
+		 </tr>
+
+		 <tr>
+			
+			<td > Total</td>
+			<td id="tot"> </td>
+			<td></td>
+
+		 </tr>
+	       <tr>
+			
+			<td > Average</td>
+			<td id= "avr"> </td>
+			<td></td>
+
+		 </tr>
+	
+</table>
+
+		</div>
+			</div>
+
+			<div class="row d-flex">
+				 
+				 	<div class="col-2"><p class="py-5">REMARKS</p>
+				 	</div>
+				 	<div class="col-6"><p id="proud" class="fs-2 pee p-5"></p>
+				 	</div>
+				 	<div class="col-4"><img src="" id="pic">
+				 	</div>
+				 
+			</div>
+		</div>
+<script type="text/javascript">
+	
+function english(){
+          var sub1 = document.getElementById("engscore").value;
+          
+          if (sub1 < 40) {
+
+		     document.getElementById("engrade").value = "F";
+
+		  }   else if (sub1 >= 40 && sub1 < 45) {
+
+		    document.getElementById("engrade").value = "E";
+		  } else if (sub1 >= 45 && sub1 < 50) {
+		    document.getElementById("engrade").value = "D";
+		  } else if (sub1 >= 50 && sub1 < 60) {
+		    document.getElementById("engrade").value = "C";
+		  } else if (sub1 >= 60 && sub1 <= 69) {
+		    document.getElementById("engrade").value = "B";
+		  } else if (sub1>= 70) {
+		    document.getElementById("engrade").value = "A";
+		  }
+}
+
+
+
+
+function maths(){
+          var sub2= document.getElementById("mathscore").value;
+          
+          if (sub2 < 40) {
+		    document.getElementById("mathgrade").value = "F";}
+		    else if(sub2>=40 && sub2 <45){
+		    	document.getElementById('mathgrade').value="E"
+		    }
+		   else if( sub2>=45 && sub2<50){
+		    	document.getElementById('mathgrade').value="D"
+		    }
+		     else if (sub2>= 50 && sub2 < 60) {
+		    document.getElementById("mathgrade").value = "C";
+		  } else if (sub2>= 60 && sub2 <= 69) {
+		    document.getElementById("mathgrade").value = "B";
+		  } else if (sub2 >= 70) {
+		    document.getElementById("mathg").value = "A";
+		  }
+}
+
+function chemistry(){
+          var sub3= document.getElementById("chescore").value;
+          
+          if (sub3 < 40) {
+		    document.getElementById("chegrade").value = "F";}
+		    else if(sub3>=40 && sub3<45){
+		    	document.getElementById('chegrade').value="E"
+		    }
+		   else if(sub3>=45 && sub3<50){
+		    	document.getElementById('chegrade').value="D"
+		    }
+		     else if (sub3>= 50 && sub3 < 60) {
+		    document.getElementById("chegrade").value = "C";
+		  } else if (sub3>= 60 && sub3 <= 69) {
+		    document.getElementById("chegrade").value = "B";
+		  } else if (sub3 >= 70) {
+		    document.getElementById("chegrade").value = "A";
+  }
+}
+
+
+
+function biology(){
+          var sub4= document.getElementById("bioscore").value;
+          
+          if (sub4 < 40) {
+		    document.getElementById("biograde").value = "F";}
+		    else if(sub4>=40 && sub4<45){
+		    	document.getElementById('biograde').value="E"
+		    }
+		   else if(sub4>=45 && sub4<50){
+		    	document.getElementById('biograde').value="D"
+		    }
+		     else if (sub4>= 50 && sub4 < 60) {
+		    document.getElementById("biograde").value = "C";
+		  } else if (sub4>= 60 && sub4 <= 69) {
+		    document.getElementById("biograde").value = "B";
+		  } else if (sub4 >= 70) {
+		    document.getElementById("biograde").value = "A";
+		  }
+}
+
+
+
+function french(){
+          var sub5= document.getElementById("frescore").value;
+          
+          if (sub5 < 40) {
+		    document.getElementById("fregrade").value = "F";}
+		    else if(sub5>=40 && sub5<45){
+		    	document.getElementById('fregrade').value="E"
+		    }
+		   else if(sub5>=45 && sub5<50){
+		    	document.getElementById('fregrade').value="D"
+		    }
+		     else if (sub5>= 50 && sub5 < 60) {
+		    document.getElementById("fregrade").value = "C";
+		  } else if (sub5>= 60 && sub5 <= 69) {
+		    document.getElementById("fregrade").value = "B";
+		  } else if (sub5 >= 70) {
+		    document.getElementById("fregrade").value = "A";
+		  }
+}
+
+
+
+
+
+//button part
+
+   function getresult(){ 
+      var s1= parseFloat(document.getElementById('engscore').value);
+    
+     var s2= parseFloat(document.getElementById('mathscore').value);
+     
+     var s3= parseFloat(document.getElementById('chescore').value);
+
+     var s4= parseFloat(document.getElementById('bioscore').value);
+
+     var s5= parseFloat(document.getElementById('frescore').value);
+
+      var tota=(s1+s2+s3+s4+s5)
+        var result=tota/5;
+     document.getElementById('tot').innerHTML=tota
+     document.getElementById('avr').innerHTML=result
+//dispaly remark
+      if(result>=50){
+       document.getElementById('proud').innerHTML="Proud of you!"
+       document.getElementById('pic').src="smi.png"}
+
+
+      else{
+      document.getElementById('proud').innerHTML="You disappointed your teacher!"
+      document.getElementById('pic').src="sad.png"}
+
+   
+
+
+}
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+  
+
+
+
+
+</body>
+</html>
